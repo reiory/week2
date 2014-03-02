@@ -69,21 +69,20 @@ class Circle{
 	}
 }
 
-class Oval extends Circle{
-	protected double r2;
-
-	public Oval(double x2, double x3)
+class Oval extends Circle
+ {
+	double r2;
+	Oval(double x,double y)
 	{
-		super(x2);
-		r2 = (x3>0)?x3:0;
+		super(x);
+		this.r2=y;
 	}
-	public double Area()
+	double area() 
+	{ 
+		return 3.14 * r1 * r2; 
+	}
+	void show()
 	{
-		return Math.PI * r1 * r2;
+		System.out.print("\n\n長軸長度="+r1+"短軸長度="+r2+"  面積:"+area());
 	}
-
-	public void Print()
-	{
-		System.out.println("Oval面積 : " + Area());
-	}
-}
+ }
